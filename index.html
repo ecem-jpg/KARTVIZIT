@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ecem Yay — New Bilişim</title>
+<meta name="description" content="Ecem Yay | Yazılım Mühendisi — Yapay Zeka ve Yazılım Proje Geliştirici | New Bilişim">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#150910;
+    --ink-soft:#241021;
+    --magenta:#7a0b45;
+    --hot-pink:#ff2e93;
+    --blush:#ffd4e5;
+    --paper:#fff6fa;
+    --gold:#e8c468;
+    --gold-soft:#f4dfa6;
+    --focus:#ffb0da;
+  }
+
+  *{box-sizing:border-box;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  html,body{margin:0;padding:0;}
+
+  body{
+    min-height:100vh;
+    background:
+      radial-gradient(120% 90% at 50% 0%, #2a0f22 0%, var(--ink) 55%, #0c060b 100%);
+    font-family:'Manrope', sans-serif;
+    color:var(--paper);
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:28px 16px 48px;
+  }
+
+  a{color:inherit; text-decoration:none;}
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--focus);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  .card{
+    width:100%;
+    max-width:392px;
+    position:relative;
+    animation: rise .7s cubic-bezier(.2,.8,.2,1) both;
+  }
+
+  @keyframes rise{
+    from{opacity:0; transform:translateY(14px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:38px 0 6px;
+    display:flex;
+    justify-content:center;
+  }
+
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:-40px -60px auto -60px;
+    height:340px;
+    background:
+      radial-gradient(closest-side, rgba(255,46,147,.55), rgba(255,46,147,0) 70%);
+    filter:blur(6px);
+    z-index:0;
+  }
+
+  .photo-frame{
+    position:relative;
+    z-index:1;
+    width:66%;
+    aspect-ratio: 3 / 4;
+    border-radius: 52% 52% 16px 16px / 62% 62% 10px 10px;
+    padding:5px;
+    background:linear-gradient(160deg, var(--gold-soft), var(--hot-pink) 55%, var(--magenta));
+    box-shadow: 0 18px 40px -12px rgba(255,46,147,.55);
+  }
+
+  .photo-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position: 50% 18%;
+    border-radius: 52% 52% 12px 12px / 62% 62% 8px 8px;
+    display:block;
+    background:var(--ink-soft);
+  }
+
+  /* ---------- Identity ---------- */
+  .identity{
+    text-align:center;
+    padding:22px 20px 0;
+  }
+
+  .name{
+    font-family:'Fraunces', serif;
+    font-optical-sizing:auto;
+    font-weight:600;
+    font-size:clamp(30px, 8vw, 36px);
+    line-height:1.05;
+    margin:0 0 8px;
+    color:var(--paper);
+  }
+
+  .title{
+    font-size:14.5px;
+    line-height:1.5;
+    color:var(--blush);
+    margin:0 auto;
+    max-width:300px;
+    font-weight:500;
+  }
+
+  .org{
+    display:inline-block;
+    margin-top:12px;
+    font-size:12.5px;
+    letter-spacing:.03em;
+    color:var(--gold);
+    font-weight:700;
+    padding:5px 14px;
+    border:1px solid rgba(232,196,104,.45);
+    border-radius:999px;
+  }
+
+  /* ---------- Divider ---------- */
+  .divider{
+    height:1px;
+    margin:26px 30px 22px;
+    background:linear-gradient(90deg, transparent, rgba(255,214,229,.35), transparent);
+  }
+
+  /* ---------- CTA ---------- */
+  .cta-wrap{
+    padding:0 20px;
+  }
+
+  .cta{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:100%;
+    padding:16px 18px;
+    border-radius:16px;
+    background:linear-gradient(115deg, var(--gold-soft), var(--hot-pink) 65%);
+    color:var(--ink);
+    font-weight:800;
+    font-size:16px;
+    box-shadow:0 14px 30px -10px rgba(255,46,147,.6);
+    border:none;
+    cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+
+  .cta:hover{transform:translateY(-2px); box-shadow:0 18px 34px -8px rgba(255,46,147,.7);}
+  .cta:active{transform:translateY(0);}
+
+  .cta svg{width:19px; height:19px; flex:none;}
+
+  .cta-hint{
+    text-align:center;
+    font-size:11.5px;
+    color:rgba(255,214,229,.55);
+    margin:10px 0 0;
+  }
+
+  /* ---------- Actions grid ---------- */
+  .actions{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+    padding:28px 18px 4px;
+  }
+
+  .action{
+    width:78px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+  }
+
+  .action .icon{
+    width:52px;
+    height:52px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,214,229,.08);
+    border:1px solid rgba(255,214,229,.18);
+    backdrop-filter:blur(6px);
+    transition:background .18s ease, transform .18s ease, border-color .18s ease;
+  }
+
+  .action .icon svg{width:22px; height:22px; stroke:var(--blush); fill:none;}
+
+  .action:hover .icon{
+    background:rgba(255,46,147,.18);
+    border-color:rgba(255,46,147,.45);
+    transform:translateY(-2px);
+  }
+
+  .action span{
+    font-size:11.5px;
+    color:rgba(255,246,250,.75);
+    font-weight:600;
+  }
+
+  /* ---------- Footer ---------- */
+  .footer{
+    text-align:center;
+    padding:30px 20px 6px;
+    font-size:11.5px;
+    color:rgba(255,214,229,.4);
+    letter-spacing:.02em;
+  }
+
+  @media (max-width:340px){
+    .action{width:70px;}
+    .action .icon{width:48px; height:48px;}
+  }
+</style>
+</head>
+<body>
+
+<main class="card">
+
+  <div class="hero">
+    <div class="photo-frame">
+      <img src="assets/ecem.jpg" alt="Ecem Yay">
+    </div>
+  </div>
+
+  <section class="identity">
+    <h1 class="name">Ecem Yay</h1>
+    <p class="title">Yazılım Mühendisi<br>Yapay Zeka ve Yazılım Proje Geliştirici</p>
+    <span class="org">New Bilişim</span>
+  </section>
+
+  <div class="divider"></div>
+
+  <div class="cta-wrap">
+    <a class="cta" href="ecem-yay.vcf" download="Ecem-Yay.vcf">
+      <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 8v6M23 11h-6"/><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/></svg>
+      Rehbere Ekle
+    </a>
+    <p class="cta-hint">Tek dokunuşla telefon rehberine kaydedin</p>
+  </div>
+
+  <nav class="actions" aria-label="İletişim seçenekleri">
+    <a class="action" href="tel:+905076700199">
+      <span class="icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+      <span>Ara</span>
+    </a>
+    <a class="action" href="https://wa.me/905076700199" target="_blank" rel="noopener">
+      <span class="icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+      <span>WhatsApp</span>
+    </a>
+    <a class="action" href="mailto:Ecem@new.com.tr">
+      <span class="icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" style="display:none"/><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+      <span>E-posta</span>
+    </a>
+    <a class="action" href="https://www.new.com.tr" target="_blank" rel="noopener">
+      <span class="icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+      <span>Web Sitesi</span>
+    </a>
+    <a class="action" href="https://www.linkedin.com/in/ecem-y-456130207/" target="_blank" rel="noopener">
+      <span class="icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9v12M10 13a4 4 0 0 1 8 0v8"/></svg></span>
+      <span>LinkedIn</span>
+    </a>
+  </nav>
+
+  <p class="footer">Ecem Yay · New Bilişim</p>
+
+</main>
+
+</body>
+</html>
