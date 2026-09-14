@@ -1,9 +1,11 @@
 # Ecem Yay — Dijital Kartvizit
 
 ## İçerik
-- `index.html` — kartvizit sayfası
+- `index.html` — kartvizit sayfası (fotoğraf artık dosyanın içine gömülü, ayrı bir görsel dosyasına ihtiyaç yok)
 - `ecem-yay.vcf` — "Rehbere Ekle" butonunun indirdiği vCard dosyası
-- `assets/ecem.jpg` — profil görseli
+- `ecem.jpg` — profil görselinin yedeği (sadece referans için; sayfa buna ihtiyaç duymaz)
+
+**Önemli:** Artık sadece `index.html` ve `ecem-yay.vcf` dosyalarının aynı klasörde olması yeterli — fotoğraf `index.html`'in içine gömüldüğü için ayrı bir dosya/klasör derdi kalmadı. GitHub'a yüklerken ikisini birlikte sürükleyip bırakmanız yeterli.
 
 ## Bilgi güncelleme
 Telefon, e‑posta, website ve LinkedIn bağlantılarını değiştirmek için **iki yeri** güncellemeniz gerekir:
